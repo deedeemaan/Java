@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.map_toysocialnetwork_gui.controller.FriendRequestController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TableView fx:id="tableView2" prefHeight="326.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="tableColumnFirstName" prefWidth="75.0" text="First Name" />
+                        <TableColumn fx:id="tableColumnLastName" prefWidth="75.0" text="Last Name" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddFriend" text="Add Friend" textAlignment="CENTER" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
