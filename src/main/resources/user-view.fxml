@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.map_toysocialnetwork_gui.controller.UserController">
+   <children>
+      <VBox prefHeight="400.66666666666663" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.7976588628762542" prefHeight="400.0" prefWidth="665.0">
+               <items>
+                   <TableView fx:id="tableView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="474.0">
+                       <columns>
+                           <TableColumn fx:id="tableColumnID" prefWidth="75.0" text="ID" />
+                           <TableColumn fx:id="tableColumnFirstName" prefWidth="75.0" text="First name" />
+                           <TableColumn fx:id="tableColumnLastName" prefWidth="75.0" text="Last name" />
+                           <TableColumn fx:id="tableColumnPassword" prefWidth="75.0" text="Password" />
+                       </columns>
+                       <columnResizePolicy>
+                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                       </columnResizePolicy>
+                   </TableView>
+                  <VBox>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAddUser" text="Add user" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleUpdateUser" text="Update user">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleDeleteUser" text="Delete user">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleFriendRequest" text="Sugestions">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handlePendingFriendRequest" text="Requests" />
+                        <Button mnemonicParsing="false" onAction="#handleFriendsList" text="Friends" />
+                        <TextField fx:id="nrOfElemOnPageTextField" onKeyPressed="#textFieldChanged" />
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="prevButton" mnemonicParsing="false" onAction="#onPressPrevButton" text="PREV" />
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#onPressNextButton" text="NEXT" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
